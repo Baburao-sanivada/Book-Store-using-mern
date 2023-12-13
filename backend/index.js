@@ -9,8 +9,14 @@ app.get("/", (req, res) => {
   return res.status(205).send("Welcome to BookStore");
 });
 
-app.listen(PORT, () => {
-  console.log(`App is listening to port : ${PORT}`);
-});
-
-mongoose.connect();
+mongoose
+  .connect(mongoDBURL)
+  .then(() => {
+    console.log("MongoDB Connection Successful");
+    app.listen(PORT, () => {
+      console.log(`App is listening to port : ${PORT}`);
+    });
+  })
+  .catch((error) => {
+    console.log(error);
+  });
