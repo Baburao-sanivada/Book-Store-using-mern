@@ -15,3 +15,5 @@ steps :
 8.Add cors library and use any method of allowing cors from the two available options
 method 1 : app.use(cors()) -> allowing all domains
 method 2 : app.use(cors({origin:"",methods:[],allowheaders:""}))
+
+9.getting started with frontend - "npm create vite@latest" => better than create react app -> select react,js
