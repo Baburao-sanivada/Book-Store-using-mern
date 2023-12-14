@@ -3,11 +3,15 @@ import { PORT, mongoDBURL } from "./config.js";
 import mongoose from "mongoose";
 import { Book } from "./Models/bookModel.js";
 import bookRouter from "./routes/bookRoutes.js";
+import cors from "cors";
 
 const app = express();
 
 // Parse data so that it is understandable to JS
 app.use(express.json());
+
+// Handling CORS - two types - allowing all domains and allowing only custom domains
+app.use(cors()); // -> allowing all cors
 
 // HTTP Route
 app.get("/", (req, res) => {
