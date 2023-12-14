@@ -13,3 +13,5 @@ steps :
 6.create seperate router for handling requests related to books model in seperate file
 7.from main file(index.js) app.use('/books',router) -> handling all book routes as middleware
 8.Add cors library and use any method of allowing cors from the two available options
+method 1 : app.use(cors()) -> allowing all domains
+method 2 : app.use(cors({origin:"",methods:[],allowheaders:""}))
