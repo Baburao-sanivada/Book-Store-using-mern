@@ -17,3 +17,7 @@ method 1 : app.use(cors()) -> allowing all domains
 method 2 : app.use(cors({origin:"",methods:[],allowheaders:""}))
 
 9.getting started with frontend - "npm create vite@latest" => better than create react app -> select react,js
+10.Add tailwind css to project by following the steps provided
+11.Install react-router-dom for making app to work as single page apllication
+12.Configure react-router-dom in Main.jsx by getting BrowserRouter
+13.In App.jsx handle different routes using <Routes> and <Route path="" element="">
