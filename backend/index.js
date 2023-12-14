@@ -70,7 +70,26 @@ app.put("/books/:id", async (req, res) => {
     if (!result) {
       res.send(400).send({ message: "Book not found" });
     }
-    res.status(200).send({ message: "Book updated Successfully" });
+    res
+      .status(200)
+      .send({ message: `Book not found with the given id : ${id}` });
+  } catch (error) {
+    console.log(error.message);
+    res.status(500).send({ message: error.message });
+  }
+});
+
+//delete book by id
+app.delete("/books/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const result = await Book.findByIdAndDelete(id);
+    if (!result) {
+      res
+        .send(400)
+        .send({ message: `Book not found with the given id : ${id}` });
+    }
+    res.send({ message: "Book Deleted Successfully" });
   } catch (error) {
     console.log(error.message);
     res.status(500).send({ message: error.message });
