@@ -21,3 +21,4 @@ method 2 : app.use(cors({origin:"",methods:[],allowheaders:""}))
 11.Install react-router-dom for making app to work as single page apllication
 12.Configure react-router-dom in Main.jsx by getting BrowserRouter
 13.In App.jsx handle different routes using <Routes> and <Route path="" element="">
+14.Add axios and react-icons libraries
