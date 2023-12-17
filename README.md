@@ -23,3 +23,4 @@ method 2 : app.use(cors({origin:"",methods:[],allowheaders:""}))
 13.In App.jsx handle different routes using <Routes> and <Route path="" element="">
 14.Add axios and react-icons libraries
 15.Show table in home page and add spinner
+16.Always remember to return the piece of code while using map func
