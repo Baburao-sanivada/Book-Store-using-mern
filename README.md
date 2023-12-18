@@ -25,3 +25,5 @@ method 2 : app.use(cors({origin:"",methods:[],allowheaders:""}))
 15.Show table in home page and add spinner
 16.Always remember to return the piece of code while using map func
 17.get book details with id and show
+18.Create Book and Save using Post Method
+19.Create Edit Book Page Similar to Create Book
