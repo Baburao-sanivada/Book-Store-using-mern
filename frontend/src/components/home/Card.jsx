@@ -9,6 +9,8 @@ import { useState } from "react";
 import BookModal from "../BookModal";
 
 const Card = ({ book }) => {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <div>
       <div
@@ -28,6 +30,10 @@ const Card = ({ book }) => {
           <h2 className="my-1">{book.author}</h2>
         </div>
         <div className="flex justify-between items-center gap-x-2 mt-4 p-4">
+          <BiShow
+            className="text-3xl text-blue-800 hover:text-black cursor-pointer"
+            onClick={() => setShowModal(true)}
+          />
           <Link to={`/books/details/${book._id}`}>
             <BsInfoCircle className="text-2xl text-green-800 hover:text-black" />
           </Link>
@@ -39,6 +45,9 @@ const Card = ({ book }) => {
           </Link>
         </div>
       </div>
+      {showModal && (
+        <BookModal book={book} onClose={() => setShowModal(false)} />
+      )}
     </div>
   );
 };
